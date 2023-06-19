@@ -1,0 +1,162 @@
+301ba812f9847f182319f09b27d2823e
+https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
+
+
+
+//        mainBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                if (userField.getText().toString().trim().equals(""))
+//                    Toast.makeText(MainActivity.this, R.string.ToastForUser, Toast.LENGTH_SHORT).show();
+//            }
+//        });
+    }
+//        mainBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+////                resultInfo.setText("Загрузка...");
+////                String city = userField.getText().toString();
+////                String key = "301ba812f9847f182319f09b27d2823e";
+////                String url_s = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + key + "&lang=ru";
+//                if (userField.getText().toString().trim().equals(""))
+//                    Toast.makeText(MainActivity.this, R.string.ToastForUser, Toast.LENGTH_SHORT).show();
+//                else{
+//                    Toast.makeText(MainActivity.this, "Yor are right", Toast.LENGTH_SHORT).show();}
+////                new Thread(new Runnable() {
+////                    @Override
+////                    public void run() {
+////                        if (userField.getText().toString().trim().equals(""))
+////                            Toast.makeText(MainActivity.this, R.string.ToastForUser, Toast.LENGTH_SHORT).show();
+////                        else{
+////                            return;
+//////                            Toast.makeText(MainActivity.this, "You are right", Toast.LENGTH_SHORT).show();
+//////                            try{
+//////                                String result = getResult(url_s);
+//////                                onPostExecute(result);
+//////                            }catch ( IOException ex){
+//////                                ex.printStackTrace();
+//////                            }
+////                        }
+////                    }
+////
+////                }).start();
+//            }
+//        });
+//    }
+//
+//    private String getResult(String url_s) throws IOException{
+//        HttpURLConnection connection = null;
+//        BufferedReader reader = null;
+//        try {
+//            URL url = new URL(url_s); // открыли URL соединение
+//            connection = (HttpURLConnection) url.openConnection(); // открыли http соединение
+//            connection.connect();
+//
+//            InputStream isteram = connection.getInputStream(); //считали весь поток, который получили
+//            reader = new BufferedReader(new InputStreamReader(isteram)); // считываем поток как сторку
+//            StringBuffer buffer = new StringBuffer();
+//            String line = "";
+//
+//            while ((line = reader.readLine()) != null) {
+//                buffer.append(line).append("\n");
+//            }
+//            return buffer.toString();
+//
+//        } catch (MalformedURLException e) {
+//            throw new RuntimeException(e);
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        } finally {
+//            if (connection != null)
+//                connection.disconnect();
+//            try {
+//                if (reader != null)
+//                    reader.close();
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//            return null;
+//        }
+//
+//    }
+//
+//    protected void onPostExecute(String result) {
+//        resultInfo.setText(result);
+//    }
+
+}
+
+
+//private class GetUrlData implements Runnable{
+//
+//    String city = userField.getText().toString();
+//    String key = "301ba812f9847f182319f09b27d2823e";
+//    String url_s = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + key + "&lang=ru";
+//
+//    protected void onPreExecute()
+//    {
+//        resultInfo.setText("Ожидайте...");
+//    }
+//
+//
+//    @Override
+//    public void run() {
+//
+//        HttpURLConnection connection = null;
+//        BufferedReader reader = null;
+//
+//        try {
+//            URL url = new URL(url_s); // открыли URL соединение
+//            connection = (HttpURLConnection) url.openConnection(); // открыли http соединение
+//            connection.connect();
+//
+//            InputStream isteram = connection.getInputStream(); //считали весь поток, который получили
+//            reader = new BufferedReader(new InputStreamReader(isteram)); // считываем поток как сторку
+//            StringBuffer buffer = new StringBuffer();
+//            String line = "";
+//
+//            while((line = reader.readLine()) != null)
+//            {
+//                buffer.append(line).append("\n");
+//            }
+//
+//            return buffer.toString();
+//
+//        } catch (MalformedURLException e) {
+//            throw new RuntimeException(e);
+//        }
+//        catch (IOException e)
+//        {
+//            throw new RuntimeException(e);
+//        }
+//        finally {
+//            if (connection != null)
+//                connection.disconnect();
+//            try{
+//                if (reader != null)
+//                    reader.close();
+//            }
+//            catch (IOException e){
+//                e.printStackTrace();}
+//        }
+//    }
+//}
+//    protected void onPostExecute(String result)
+//    {
+//        resultInfo.setText(result);
+//    }
+//}
+
+
+//                if (userField.getText().toString().trim().equals(""))
+//                    Toast.makeText(MainActivity.this, R.string.ToastForUser, Toast.LENGTH_SHORT).show();
+//                else{
+////                    Toast.makeText(MainActivity.this, "You are right", Toast.LENGTH_SHORT).show();
+////                    String city = userField.getText().toString();
+////                    String key = "301ba812f9847f182319f09b27d2823e";
+////                    String url = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + key + "&lang=ru";
+//
+//                    GetUrlData gud = new GetUrlData();
+//                    Thread thread = new Thread(gud);
+//                    thread.start();
+//                }
